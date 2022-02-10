@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/ent-mfe-angular-template'),
+      dir: require('path').join(__dirname, './coverage/et-widget'),
       subdir: '.',
       reporters: [
         { type: 'html' },

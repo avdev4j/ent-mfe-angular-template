@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ent-mfe-angular-template": {
+    "et-widget": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ent-mfe-angular-template",
+            "outputPath": "dist/et-widget",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ent-mfe-angular-template:build:production"
+              "browserTarget": "et-widget:build:production"
             },
             "development": {
-              "browserTarget": "ent-mfe-angular-template:build:development"
+              "browserTarget": "et-widget:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ent-mfe-angular-template:build"
+            "browserTarget": "et-widget:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "ent-mfe-angular-template"
+  "defaultProject": "et-widget"
 }
