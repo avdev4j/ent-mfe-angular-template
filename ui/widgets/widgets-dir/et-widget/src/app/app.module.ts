@@ -14,13 +14,15 @@ import { ButtonComponent } from './button/button.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: []
 })
 export class AppModule {
   constructor(private injector: Injector) {
-    const el = createCustomElement(AppComponent, { injector });
-    customElements.define('et-app', el);
+    if (!customElements.get('et-app')) {
+      const el = createCustomElement(AppComponent, { injector: this.injector });
+      customElements.define('et-app', el);
+    }
   }
+
   ngDoBootstrap() {}
 }
